@@ -1,0 +1,60 @@
+.card {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 240px;
+  width: 400px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card input {
+  margin-bottom: 16px;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.35;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border-top: 1px solid transparent;
+  border-bottom: 4px solid #1d63a8;
+  border-right: 4px solid #1d63a8;
+  border-left: 1px solid transparent;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 18px;
+  letter-spacing: 0.45;
+  font-weight: bold;
+  color: white;
+  background-color: #1976d2;
+  width: 100%;
+}
+
+button:focus {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}

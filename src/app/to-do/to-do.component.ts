@@ -8,6 +8,7 @@ import { ToDo } from '../to-do';
 })
 export class ToDoComponent implements OnInit {
   todo: ToDo = {
+    id: 0,
     value: '',
   };
 

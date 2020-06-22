@@ -3,9 +3,8 @@
     To-Do List
   </div>
   <ul>
-    <li>A sample to-do</li>
-    <li>Another sample to-do</li>
-    <li>Yet another sample to-do</li>
-    <li>and another sample to-do</li>
+    <li *ngFor="let todo of todos">
+      <span>{{ todo.value }}</span>
+    </li>
   </ul>
 </div>

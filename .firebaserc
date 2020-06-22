@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "to-do-a5264": {
+      "hosting": {
+        "registration-demo": [
+          "to-do-a5264"
+        ]
+      }
+    }
+  }
+}

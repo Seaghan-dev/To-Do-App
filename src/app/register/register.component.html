@@ -1,12 +1,26 @@
 <div class="card">
-  <form>
+  <form
+    (ngSubmit)="register(); registerForm.resetForm()"
+    #registerForm="ngForm"
+    autocomplete="off"
+  >
     <div class="card-header">
       Register
     </div>
-    <input type="text" placeholder="First Name" />
-    <input type="text" placeholder="Last Name" />
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
+    <input
+      type="email"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="email"
+      required
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="password"
+      required
+    />
     <button type="submit">Register</button>
   </form>
 </div>

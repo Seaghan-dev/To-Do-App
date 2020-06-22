@@ -158,17 +158,6 @@
     z-index: -10;
   }
 
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
   .terminal {
     position: relative;
     width: 80%;
@@ -223,16 +212,32 @@
   }
 
   nav a {
-    padding-right: 8px;
+    padding-right: 16px;
     color: white;
+    text-decoration: none;
   }
 
   nav a:hover {
     text-decoration: underline;
   }
 
-  nav a:active {
+  .active-link {
     font-weight: bold;
+  }
+
+  button {
+    padding: 8px;
+    margin-right: 16px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    font-weight: bold;
+    background: white;
+    color: #1976d2;
   }
 
   footer {
@@ -324,9 +329,27 @@
   <div class="spacer"></div>
   <span>
     <nav>
-      <a routerLink="/to-do">To-Do</a>
-      <a routerLink="/login">Login</a>
-      <a routerLink="/register">Register</a>
+      <a
+        routerLink="/to-do"
+        routerLinkActive="active-link"
+        *ngIf="authService.user | async"
+        >To-Do</a
+      >
+      <a
+        routerLink="/login"
+        routerLinkActive="active-link"
+        *ngIf="!(authService.user | async)"
+        >Login</a
+      >
+      <a
+        routerLink="/register"
+        routerLinkActive="active-link"
+        *ngIf="!(authService.user | async)"
+        >Register</a
+      >
+      <button (click)="logout()" *ngIf="authService.user | async">
+        Logout
+      </button>
     </nav>
   </span>
 </div>

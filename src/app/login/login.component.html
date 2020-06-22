@@ -1,10 +1,24 @@
 <div class="card">
-  <form>
+  <form (ngSubmit)="login(); loginForm.resetForm()" #loginForm="ngForm">
     <div class="card-header">
       Login
     </div>
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
-    <button type="submit">Login</button>
+    <input
+      type="email"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="email"
+      required
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="password"
+      required
+    />
+    <button type="submit">
+      Login
+    </button>
   </form>
 </div>

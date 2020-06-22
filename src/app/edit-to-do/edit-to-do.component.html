@@ -1,0 +1,19 @@
+<div class="card" *ngIf="todo">
+  <form #todoForm="ngForm">
+    <div class="card-header">
+      Edit To-Do
+    </div>
+    <input
+      type="text"
+      placeholder="To-Do"
+      [(ngModel)]="todo.value"
+      name="todo"
+    />
+    <button (click)="updateToDo()" class="update">
+      Save Changes
+    </button>
+    <button (click)="removeToDo()" class="delete">
+      Delete To-Do
+    </button>
+  </form>
+</div>

@@ -19,4 +19,5 @@ platformBrowserDynamic()
 // https://alligator.io/angular/firebase-authentication-angularfire2/
 // https://github.com/angular/angularfire
 // https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
+// https://stackoverflow.com/questions/41500102/cleanest-way-to-reset-forms
 */

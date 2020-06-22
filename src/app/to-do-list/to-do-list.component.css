@@ -20,25 +20,26 @@
   margin-bottom: 16px;
 }
 
-button {
+ul {
+  list-style-type: none;
+}
+
+li {
   cursor: pointer;
-  border-top: 1px solid transparent;
-  border-bottom: 4px solid #1d63a8;
-  border-right: 4px solid #1d63a8;
-  border-left: 1px solid transparent;
-  border-radius: 10px;
-  padding: 16px;
-  font-size: 18px;
-  letter-spacing: 0.45;
-  font-weight: bold;
-  color: white;
-  background-color: #1976d2;
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 8px;
   width: 100%;
 }
 
-button:focus {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  border-right: 1px solid transparent;
-  border-left: 1px solid transparent;
+li:hover {
+  border-left: 4px solid #1976d2;
+  background-color: #ddd;
+  left: 0.1em;
+}
+
+li.selected {
+  border-left: 4px solid #1976d2;
+  background-color: #ddd;
+  left: 0.1em;
 }

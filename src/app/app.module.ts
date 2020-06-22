@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { EditToDoComponent } from './edit-to-do/edit-to-do.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
     RegisterComponent,
     ToDoComponent,
     ToDoListComponent,
+    EditToDoComponent,
   ],
   imports: [
     BrowserModule,

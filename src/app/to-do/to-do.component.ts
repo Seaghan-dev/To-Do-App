@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDo } from '../to-do';
+import { TODOS } from '../mock-to-dos';
 
 @Component({
   selector: 'app-to-do',
@@ -8,11 +9,16 @@ import { ToDo } from '../to-do';
 })
 export class ToDoComponent implements OnInit {
   todo: ToDo = {
-    id: 0,
+    id: TODOS[TODOS.length - 1].id + 1,
     value: '',
   };
 
   constructor() {}
+
+  addToDo() {
+    TODOS.push({ ...this.todo });
+    this.todo.id = ++this.todo.id;
+  }
 
   ngOnInit(): void {}
 }

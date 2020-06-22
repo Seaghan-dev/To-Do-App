@@ -3,8 +3,15 @@
     To-Do List
   </div>
   <ul>
-    <li *ngFor="let todo of todos">
-      <span>{{ todo.value }}</span>
+    <li
+      *ngFor="let todo of todos"
+      [class.selected]="todo === selectedToDo"
+      (click)="selectToDo(todo)"
+    >
+      {{ todo.id }} - <span>{{ todo.value }}</span>
     </li>
   </ul>
 </div>
+
+<app-to-do></app-to-do>
+<app-edit-to-do [todo]="selectedToDo"></app-edit-to-do>

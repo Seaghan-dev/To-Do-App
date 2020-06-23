@@ -7,8 +7,6 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'registration-demo';
-
   constructor(public authService: AuthService) {}
 
   logout() {

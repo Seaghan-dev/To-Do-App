@@ -1,17 +1,21 @@
-<div class="card">
-  <div class="card-header">
-    To-Do List
+<div class="root">
+  <div class="card">
+    <div class="card-header">
+      To-Do List
+    </div>
+    <ul>
+      <li
+        *ngFor="let todo of todos | async"
+        [class.selected]="todo === selectedToDo"
+        (click)="selectToDo(todo)"
+      >
+        <span>{{ todo.value }}</span>
+      </li>
+    </ul>
   </div>
-  <ul>
-    <li
-      *ngFor="let todo of todos | async"
-      [class.selected]="todo === selectedToDo"
-      (click)="selectToDo(todo)"
-    >
-      <span>{{ todo.value }}</span>
-    </li>
-  </ul>
-</div>
 
-<app-to-do></app-to-do>
-<app-edit-to-do [todo]="selectedToDo"></app-edit-to-do>
+  <div class="actions">
+    <app-to-do></app-to-do>
+    <app-edit-to-do [todo]="selectedToDo"></app-edit-to-do>
+  </div>
+</div>

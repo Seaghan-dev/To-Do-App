@@ -1,9 +1,8 @@
-<div class="card" *ngIf="todo">
-  <form (ngSubmit)="addToDo(); todoForm.resetForm()" #todoForm="ngForm">
+<div class="card">
+  <form (ngSubmit)="createToDo(); todoForm.resetForm()" #todoForm="ngForm">
     <div class="card-header">
       Add a To-Do
     </div>
-    {{ todo.id }}
     <input
       type="text"
       placeholder="To-Do"

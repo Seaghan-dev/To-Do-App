@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { ToDo } from '../to-do';
-import { TODOS } from '../mock-to-dos';
+import { CrudService } from '../crud.service';
+//import { TODOS } from '../mock-to-dos';
 
 @Component({
   selector: 'app-to-do-list',
@@ -9,12 +11,14 @@ import { TODOS } from '../mock-to-dos';
   styleUrls: ['./to-do-list.component.css'],
 })
 export class ToDoListComponent implements OnInit {
-  todos = TODOS;
+  public todos: Observable<any[]>;
 
   selectedToDo: ToDo;
-  constructor() {}
+  constructor(private crudService: CrudService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.todos = this.crudService.readToDos();
+  }
 
   selectToDo(todo: ToDo): void {
     this.selectedToDo = todo;

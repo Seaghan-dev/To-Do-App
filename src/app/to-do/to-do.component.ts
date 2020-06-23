@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDo } from '../to-do';
-import { TODOS } from '../mock-to-dos';
+import { CrudService } from '../crud.service';
 
 @Component({
   selector: 'app-to-do',
@@ -9,15 +9,13 @@ import { TODOS } from '../mock-to-dos';
 })
 export class ToDoComponent implements OnInit {
   todo: ToDo = {
-    id: TODOS[TODOS.length - 1].id + 1,
     value: '',
   };
 
-  constructor() {}
+  constructor(private crudService: CrudService) {}
 
-  addToDo() {
-    TODOS.push({ ...this.todo });
-    this.todo.id = ++this.todo.id;
+  createToDo() {
+    this.crudService.createToDo(this.todo);
   }
 
   ngOnInit(): void {}

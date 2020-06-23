@@ -4,11 +4,11 @@
   </div>
   <ul>
     <li
-      *ngFor="let todo of todos"
+      *ngFor="let todo of todos | async"
       [class.selected]="todo === selectedToDo"
       (click)="selectToDo(todo)"
     >
-      {{ todo.id }} - <span>{{ todo.value }}</span>
+      <span>{{ todo.value }}</span>
     </li>
   </ul>
 </div>

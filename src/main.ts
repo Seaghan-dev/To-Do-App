@@ -20,4 +20,10 @@ platformBrowserDynamic()
 // https://github.com/angular/angularfire
 // https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
 // https://stackoverflow.com/questions/41500102/cleanest-way-to-reset-forms
+// https://github.com/angular/angularfire/blob/master/docs/rtdb/lists.md
+// https://github.com/angular/angularfire/blob/master/docs/auth/router-guards.md
+// https://fireship.io/lessons/reactive-crud-app-with-angular-and-firebase-tutorial/
+// https://angular.io/guide/router#setting-up-wildcard-routes
+// https://angular.io/tutorial
+// https://github.com/angular/angularfire/tree/master/docs
 */

@@ -1,4 +1,4 @@
 export interface EditToDo {
-  id: number;
+  id: string;
   value: string;
 }

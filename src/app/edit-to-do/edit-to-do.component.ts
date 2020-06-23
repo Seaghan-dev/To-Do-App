@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EditToDo } from '../edit-to-do';
+import { CrudService } from '../crud.service';
 
 @Component({
   selector: 'app-edit-to-do',
@@ -8,14 +9,15 @@ import { EditToDo } from '../edit-to-do';
 })
 export class EditToDoComponent implements OnInit {
   @Input() todo: EditToDo;
-  constructor() {}
+  constructor(private crudService: CrudService) {}
 
   updateToDo() {
-    console.log('updating todo');
+    this.crudService.updateToDo(this.todo.id, this.todo.value);
   }
 
-  removeToDo() {
-    console.log('deleting todo');
+  deleteToDo() {
+    this.crudService.deleteToDo(this.todo.id);
+    this.todo = null;
   }
 
   ngOnInit(): void {}
